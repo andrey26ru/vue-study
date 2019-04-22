@@ -29,4 +29,4 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
-npm run dev
+https://mexicoa-c1907.firebaseapp.com/
