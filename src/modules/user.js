@@ -35,20 +35,17 @@ export default {
     USER_LOGIN: async ({ commit }, { email, password }) => {
       commit("ERROR_CLEAR");
       commit("LOADING_SET", true);
-      return fb
-        .auth()
-        .signInWithEmailAndPassword(email, password)
-        .then(user => {
-          commit("USER_SET", new User(user.uid));
-          return user;
-        })
-        .catch(err => {
-          console.log("CATCH", err);
-          return err;
-        })
-        .finally(() => {
-          commit("LOADING_SET", false);
-        });
+      try {
+        const user = await fb
+          .auth()
+          .signInWithEmailAndPassword(email, password);
+        commit("USER_SET", new User(user.uid));
+        commit("LOADING_SET", false);
+      } catch (error) {
+        commit("LOADING_SET", false);
+        // commit("ERROR_SET", error.message);
+        throw error;
+      }
     },
 
     USER_LOGOUT: ({ commit }) => {

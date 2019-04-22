@@ -1,41 +1,17 @@
-<template>
-  <div class="modal">
-    <div class="modal__wrapper">
-      <div class="modal__inner">
-        <div class="modal__header">
-          <h3 class="modal__title">Хотите купить {{ product.title }} ?</h3>
-        </div>
-        <div>
-          <form @submit.prevent="onSave">
-            <div class="modal__field">
-              <input
-                type="text"
-                placeholder="Ваше имя"
-                required
-                v-model="name"
-                class="modal__input"
-              />
-            </div>
-            <div class="modal__field">
-              <input
-                type="text"
-                placeholder="Ваш телефон"
-                v-model="phone"
-                class="modal__input"
-              />
-            </div>
-            <button type="submit" class="modal__button-buy">Да</button>
-            <a
-              title="Закрыть"
-              class="modal__button-close"
-              @click="$emit('close')"
-              >x</a
-            >
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+.modal
+  .modal__wrapper
+    .modal__inner
+      .modal__header
+        h3.modal__title Хотите купить {{ product.title }} ?
+      div
+        form(@submit.prevent='onSave')
+          .modal__field
+            input.modal__input(type='text', placeholder='Ваше имя', required='', v-model='name')
+          .modal__field
+            input.modal__input(type='text', placeholder='Ваш телефон', v-model='phone')
+          button.modal__button-buy(type='submit') Да
+          a.modal__button-close(title='Закрыть', @click="$emit('close')") x
 </template>
 
 <script>

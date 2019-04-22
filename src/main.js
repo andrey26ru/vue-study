@@ -3,11 +3,11 @@ import * as fb from "firebase";
 import Vuetify from "vuetify";
 import Vuelidate from "vuelidate";
 import BuyDialogComponent from "@/components/Common/BuyDialog";
-import Modal_Buy_Component from "@/components/Common/Modal_Buy";
-import MyForm from "@/components/Common/Form";
-import Product_Card_Component from "@/components/Products/Product_Card";
+import ModalBuyComponent from "@/components/Common/ModalBuy";
+import ProductCardComponent from "@/components/Products/ProductCard";
 import SliderComponent from "@/components/Slider";
-import SliderItemComponent from "@/components/SliderItem";
+import CarouselComponent from "@/components/Carousel/Carousel";
+import CarouselSlideComponent from "@/components/Carousel/CarouselSlide";
 import "./plugins/vuetify";
 import App from "./App.vue";
 import router from "./router";
@@ -30,11 +30,11 @@ Vue.use(Vuetify, {
 });
 
 Vue.component("app-buy-dialog", BuyDialogComponent);
-Vue.component("product-card", Product_Card_Component);
-Vue.component("modal-buy", Modal_Buy_Component);
+Vue.component("product-card", ProductCardComponent);
+Vue.component("modal-buy", ModalBuyComponent);
 Vue.component("slider", SliderComponent);
-Vue.component("slider-item", SliderItemComponent);
-Vue.component("my-form", MyForm);
+Vue.component("carousel", CarouselComponent);
+Vue.component("carousel-slide", CarouselSlideComponent);
 
 new Vue({
   router,

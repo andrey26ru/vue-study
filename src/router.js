@@ -6,7 +6,7 @@ import Login from "@/components/Auth/Login";
 import Registration from "@/components/Auth/Registration";
 import Orders from "@/components/User/Orders";
 import NewProduct from "@/components/Products/NewProduct";
-import AboutUs from "@/components/Products/AboutUs";
+import AboutUs from "@/components/AboutUs";
 import Product from "@/components/Products/Product";
 
 Vue.use(Router);

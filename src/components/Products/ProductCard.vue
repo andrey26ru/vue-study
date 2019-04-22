@@ -33,16 +33,19 @@ export default {
     font-size: 30px;
     margin: 15px 0;
   }
+
   &__describe {
     margin-top: 10px;
     padding-left: 1rem;
   }
+
   &__price {
     color: #fc0e1e;
     font-size: 18px;
     font-weight: bold;
     text-align: center;
   }
+
   &__button-describe {
     color: #2629f5;
     border: 1px solid #2629f5;
@@ -51,6 +54,7 @@ export default {
     font-size: 1.2rem;
     transition: all 0.5s ease;
   }
+
   &__button-buy {
     background: #013c74;
     color: rgb(255, 255, 255);
@@ -63,13 +67,16 @@ export default {
     transition: all 0.5s ease;
     margin: 10px 0 30px 10px;
   }
+
   &__button-describe:focus,
   &__button-buy:focus {
     outline: none;
   }
+
   &__button-buy:hover {
     background: rgb(92, 94, 224);
   }
+
   &__button-describe:hover {
     background: rgb(241, 236, 184);
   }
